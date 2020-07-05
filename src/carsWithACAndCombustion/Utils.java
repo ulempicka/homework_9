@@ -1,6 +1,6 @@
 package carsWithACAndCombustion;
 
-public class RangeCalculatorUtils {
+public class Utils {
 
 
 }
