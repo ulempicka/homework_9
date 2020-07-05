@@ -22,4 +22,8 @@ public class Room {
         }
     }
 
+    public void show(){
+        System.out.println("Aktualna temperatura: " + actualTemperature + " , pokój: " + roomNumber + ", klima włączona? " + airConditioner.isOn());
+    }
+
 }
