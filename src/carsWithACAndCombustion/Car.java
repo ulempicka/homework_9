@@ -2,6 +2,7 @@ package carsWithACAndCombustion;
 
 public class Car extends Vehicle{
     boolean airCond;
+    public static final double AC_INCREASE_COMBUSTION = 0.8;
 
     public Car(String name, int tankVolume, double avgCombustion, boolean airCond) {
         super(name, tankVolume, avgCombustion);
@@ -18,14 +19,14 @@ public class Car extends Vehicle{
 
     public double calculateCombustion(){
         if (airCond){
-            return getAvgCombustion() + 0.8;
+            return getAvgCombustion() + AC_INCREASE_COMBUSTION;
         }else {
             return getAvgCombustion();
         }
     }
 
     public double calculateRange(double actualCombustion){
-        System.out.println("tank " + getTankVolume() + " , spalanie " + actualCombustion);
+        System.out.println("spalanie " + actualCombustion);
         return (getTankVolume() * 100) / (actualCombustion);
     }
 
