@@ -37,8 +37,8 @@ public class Truck extends Car {
     }
 
     @Override
-    public double calculateRange(double actualCombustion) {
-        return super.calculateRange(actualCombustion);
+    public double calculateRange() {
+        return super.calculateRange();
     }
 
     @Override

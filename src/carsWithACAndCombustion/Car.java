@@ -25,9 +25,9 @@ public class Car extends Vehicle{
         }
     }
 
-    public double calculateRange(double actualCombustion){
-        System.out.println("spalanie " + actualCombustion);
-        return (getTankVolume() * 100) / (actualCombustion);
+    public double calculateRange(){
+        System.out.println("spalanie " + calculateCombustion());
+        return (getTankVolume() * 100) / (calculateCombustion());
     }
 
     public void showRange(double range){
