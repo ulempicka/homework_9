@@ -13,13 +13,13 @@ public class TestCars {
                 Car car1 = (Car) vehicle;
                 car1.showInfo();
                 carRange = car1.calculateRange();
-                car1.showRange(carRange);
+                System.out.println("Zasięg " + carRange);
 
             } else if (vehicle instanceof Truck) {
                 Truck truck1 = (Truck) vehicle;
                 truck1.showInfo();
                 truckRange = truck1.calculateRange();
-                truck1.showRange(truckRange);
+                System.out.println("Zasięg " + truckRange);
             }
         }
 
@@ -29,13 +29,13 @@ public class TestCars {
                 car1.setAirCond(true);
                 car1.showInfo();
                 carRange = car1.calculateRange();
-                car1.showRange(carRange);
+                System.out.println("Zasięg " + carRange);
             } else if (vehicle instanceof Truck) {
                 Truck truck1 = (Truck) vehicle;
                 truck1.setAirCond(true);
                 truck1.showInfo();
                 truckRange = truck1.calculateRange();
-                truck1.showRange(truckRange);
+                System.out.println("Zasięg " + truckRange);
             }
         }
     }

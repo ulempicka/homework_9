@@ -30,10 +30,6 @@ public class Car extends Vehicle{
         return (getTankVolume() * 100) / (calculateCombustion());
     }
 
-    public void showRange(double range){
-        System.out.println("Zasięg " + range);
-    }
-
     @Override
     public String info() {
         return super.info() + ", klima włączona: " + airCond;
