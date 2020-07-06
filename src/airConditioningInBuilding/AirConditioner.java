@@ -25,14 +25,14 @@ public class AirConditioner {
         isOn = on;
     }
 
-    public void decreaseTemperature() {
+    public void decreaseTemperature(Room room) {
         AirConditioner airConditioner = null;
 
         if (airConditioner instanceof BasicAirConditioner) {
-            ((BasicAirConditioner)airConditioner).decreaseTemperature();
+            (airConditioner).decreaseTemperature(room);
 
         } else if (airConditioner instanceof ProAirConditioner) {
-            //((ProAirConditioner)airConditioner.decreaseTemperature();
+            airConditioner.decreaseTemperature(room);
         }
 
     }

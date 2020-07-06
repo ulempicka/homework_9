@@ -5,38 +5,22 @@ public class TestCars {
         Vehicle[] vehicles = new Vehicle[2];
         vehicles[0] = new Car("Toyota Yaris", 45, 4.5, false);
         vehicles[1] = new Truck("Star 244", 150, 26, false, 1000);
-        double carRange;
-        double truckRange;
+        double range;
 
         for (Vehicle vehicle : vehicles) {
-            if (vehicle instanceof Car) {
-                Car car1 = (Car) vehicle;
-                car1.showInfo();
-                carRange = car1.calculateRange();
-                System.out.println("Zasięg " + carRange);
-
-            } else if (vehicle instanceof Truck) {
-                Truck truck1 = (Truck) vehicle;
-                truck1.showInfo();
-                truckRange = truck1.calculateRange();
-                System.out.println("Zasięg " + truckRange);
-            }
+            vehicle.showInfo();
+            range = vehicle.calculateRange();
+            System.out.println("Zasięg " + range);
         }
 
+        vehicles[0].setAirCond(true);
+        vehicles[1].setAirCond(true);
+
         for (Vehicle vehicle : vehicles) {
-            if (vehicle instanceof Car) {
-                Car car1 = (Car) vehicle;
-                car1.setAirCond(true);
-                car1.showInfo();
-                carRange = car1.calculateRange();
-                System.out.println("Zasięg " + carRange);
-            } else if (vehicle instanceof Truck) {
-                Truck truck1 = (Truck) vehicle;
-                truck1.setAirCond(true);
-                truck1.showInfo();
-                truckRange = truck1.calculateRange();
-                System.out.println("Zasięg " + truckRange);
-            }
+            vehicle.showInfo();
+            range = vehicle.calculateRange();
+            System.out.println("Zasięg " + range);
         }
     }
 }
+

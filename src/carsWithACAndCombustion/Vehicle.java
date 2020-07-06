@@ -26,4 +26,14 @@ public class Vehicle {
     public void showInfo(){
         System.out.println(info());
     }
+
+    public void setAirCond(boolean airCond) {
+    }
+
+
+    public double calculateRange(){
+//        System.out.println("spalanie " + avgCombustion);
+//        return (tankVolume * 100) / (avgCombustion);
+        return 0;
+    }
 }

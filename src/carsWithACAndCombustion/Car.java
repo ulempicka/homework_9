@@ -13,6 +13,7 @@ public class Car extends Vehicle{
         return airCond;
     }
 
+    @Override
     public void setAirCond(boolean airCond) {
         this.airCond = airCond;
     }
@@ -25,6 +26,7 @@ public class Car extends Vehicle{
         }
     }
 
+    @Override
     public double calculateRange(){
         System.out.println("spalanie " + calculateCombustion());
         return (getTankVolume() * 100) / (calculateCombustion());

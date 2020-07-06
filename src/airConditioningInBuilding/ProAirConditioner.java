@@ -7,7 +7,7 @@ public class ProAirConditioner extends AirConditioner{
         super(expectedTemperature, isOn);
     }
 
-    public double decreaseTemperature(Room room) {
-        return room.actualTemperature - (DECREASE_TEMP_PER_M3/room.roomSize);
-    }
+//    public double decreaseTemperature(Room room) {
+//        return room.actualTemperature - (DECREASE_TEMP_PER_M3/room.roomSize);
+//    }
 }
