@@ -13,10 +13,6 @@ public class AirConditioner {
         return expectedTemperature;
     }
 
-    public void setExpectedTemperature(double expectedTemperature) {
-        this.expectedTemperature = expectedTemperature;
-    }
-
     public boolean isOn() {
         return isOn;
     }
@@ -26,15 +22,6 @@ public class AirConditioner {
     }
 
     public void decreaseTemperature(Room room) {
-        AirConditioner airConditioner = null;
-
-        if (airConditioner instanceof BasicAirConditioner) {
-            (airConditioner).decreaseTemperature(room);
-
-        } else if (airConditioner instanceof ProAirConditioner) {
-            airConditioner.decreaseTemperature(room);
-        }
-
     }
 
 }

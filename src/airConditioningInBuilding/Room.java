@@ -2,8 +2,8 @@ package airConditioningInBuilding;
 
 public class Room {
     double actualTemperature;
-    int roomNumber;
-    int roomSize;
+    private int roomNumber;
+    private double roomSize;
     AirConditioner airConditioner;
 
     public Room(double actualTemperature, int roomNumber, int roomSize, AirConditioner airConditioner) {
@@ -13,28 +13,11 @@ public class Room {
         this.airConditioner = airConditioner;
     }
 
-    public void modifyTemperature(){
-        if (actualTemperature > airConditioner.getExpectedTemperature()) {
-            airConditioner.setOn(true);
-            //airConditioner.decreaseTemperature(Room room);
-        }else if(actualTemperature <= airConditioner.getExpectedTemperature()){
-            airConditioner.setOn(false);
-        }
+    public double getRoomSize() {
+        return roomSize;
     }
 
-//    public void decreaseTemperature() {
-//        AirConditioner airConditioner = null;
-//
-//        if (airConditioner instanceof BasicAirConditioner) {
-//            ((BasicAirConditioner)airConditioner).decreaseTemperature();
-//
-//        } else if (airConditioner instanceof ProAirConditioner) {
-//            //((ProAirConditioner)airConditioner.decreaseTemperature();
-//        }
-//
-//    }
-
-    public void show(){
+    public void show() {
         System.out.println("Aktualna temperatura: " + actualTemperature + " , pokój: " + roomNumber + ", klima włączona? " + airConditioner.isOn());
     }
 

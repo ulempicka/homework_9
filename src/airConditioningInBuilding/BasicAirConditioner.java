@@ -1,7 +1,7 @@
 package airConditioningInBuilding;
 
 public class BasicAirConditioner extends AirConditioner{
-    public static int DECREASE_TEMP_PER_M3 = 1;
+    public static double DECREASE_TEMP_PER_M3 = 1;
 
     public BasicAirConditioner(double expectedTemperature, boolean isOn) {
         super(expectedTemperature, isOn);
@@ -9,6 +9,8 @@ public class BasicAirConditioner extends AirConditioner{
 
     @Override
     public void decreaseTemperature(Room room) {
-        room.actualTemperature -= (DECREASE_TEMP_PER_M3/room.roomSize);
+        double decrease = DECREASE_TEMP_PER_M3 / room.getRoomSize();
+        System.out.println("Włączam klimę, temp obnizy sie o " + decrease);
+        room.actualTemperature -= (decrease);
     }
 }
