@@ -32,8 +32,6 @@ public class Vehicle {
 
 
     public double calculateRange(){
-//        System.out.println("spalanie " + avgCombustion);
-//        return (tankVolume * 100) / (avgCombustion);
         return 0;
     }
 }
